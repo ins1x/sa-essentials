@@ -1,0 +1,55 @@
+#
+#   Mod Loader Menu Localization File
+#
+
+# Common
+ML_FEO Configuraœ¨es de Mods
+ML_ONN LIG
+ML_OFF DES
+ML_FTN Pr¦ximo
+ML_FTP Anterior
+ML_FTB Voltar
+
+# Main Page
+ML_F0HH Configuraœ¨es de Mods
+ML_F0E0 Habilitar Menu
+ML_F0EP Habilitar Plugins
+ML_F0EL Habilitar Log
+ML_F0LF Descarga Imediata do Log
+ML_F0LS Tamanho M˜ximo do Log
+ML_F0MM Modificaœ¨es
+ML_F0RR Atualizar Modificaœ¨es
+ML_F0RA Atualizaœšo Autom˜tica
+
+# Modifications Page (Dynamic)
+ML_FMHH Modificaœ¨es
+ML_FMY1 DYNAMIC
+ML_FMY2 DYNAMIC
+ML_FMY3 DYNAMIC
+ML_FMY4 DYNAMIC
+ML_FMY5 DYNAMIC
+ML_FMY6 DYNAMIC
+ML_FMY7 DYNAMIC
+ML_FMY8 DYNAMIC
+ML_FMY9 DYNAMIC
+ML_FMYA DYNAMIC
+ML_FMYB DYNAMIC
+ML_FMYC DYNAMIC
+
+# Selected Modification (Dynamic)
+ML_FYHH DYNAMIC
+ML_FYE0 Habilitada
+ML_FYPR Prioridade
+
+# Helper texts
+ML_H0NM Sem mods instalados
+ML_H0E0 LIG/DES este menu.~n~Necess˜rio reiniciar.
+ML_H0EP LIG/DES o carregador de plugins.~n~Necess˜rio reiniciar.
+ML_H0EL LIG/DES o arquivo log (registro).~n~Desligar aumenta o desempenho.
+ML_H0LF LIG/DES a descarga do log (registro) ao disco.~n~Desligar aumenta o desempenho.
+ML_H0LS Tamanho m˜ximo do arquivo log (registro) no disco.
+ML_H0RR Reescanear e reinstalar os mods (tome cuidado ao usar)
+ML_H0RA LIG/DES a detecœšo autom˜tica de alteraœ¨es.
+ML_HMHH Digite algumas palavras-chaves para encontrar o mod.~n~Use ~<~~>~ para trocar de p˜gina.
+ML_HYE0 LIG/DES o mod no jogo.~n~Tome cuidado. Pode ser necess˜rio reiniciar para alguns arquivos.
+ML_HYPR Muda a prioridade deste mod sobre os outros.

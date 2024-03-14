@@ -1,0 +1,47 @@
+Install ".cs" and enter the commands below to run certain tests.
+The .cs file may or may not be compatible with Sanny Builder decompiling as it was compiled with gta3script.
+
+"P1"
+"EXIT" to exit
+Shows text in each drawing event (DRAW_EVENT).
+This can be useful if all draw events are being called in your game.
+It is common for hud mods, such as GTA V Hud and Classic Hud, to not support certain events, for example, drawing on the radar/minimap.
+If you create mods, notice that the most "reliable" ones are "BEFORE_HUD", "AFTER_HUD" and "AFTER_FADE". Avoid using radar-related events and blips.
+
+"P2"
+Action command to exit (Triangle or F/Enter)
+Creates a graffiti object and places it on the surface in front of the camera.
+
+"P3"
+Draws two sprites using a mask. You can move them with the numpad numbers and - +
+Note that it may not work in RenderHook, its limitation.
+
+"P4"
+Creates a new script based on a label and then changes the value of a variable in that new script.
+"EXIT" to close the new script.
+
+"P5"
+Simply close the test script. Note that the "child" script created with P4 is also closed.
+
+"P6"
+Starts a kind of editor to place objects in the CJ. It was programmed quickly just for testing, so its use is very poor.
+To use, hold - + (on the numpad) and then press the B M P R S D H L XYZ keys where each key indicates some action.
+For example holding + and pressing B increases the Bone ID, M for the model ID etc. P with X Y or Z to change the position.
+You can do various combinations, like holding + together with R and X to increase the X rotation (if your keyboard can't do it, that's your problem).
+You can also hold SHIFT to go up or down faster.
+
+"P7"
+"EXIT" to exit
+Press Y to simulate a shot using the current weapon. It's a useful example for cover mods etc. Note that the shot always comes in front of the person, not the gun, because that's how the game works.
+
+"P8"
+"EXIT" to exit
+Renders an "image" with a gradient noise. You can use + and - of the numpad with the letters that appear on the interface to adjust the parameters.
+Note that this is a very heavy process not because of the gradient noise, but because, as it is just a test, 100x100 DRAW_TEXTURE_PLUS commands were used, one for each "pixel" to form the image.
+Also disable SCRLog to avoid lag. Only use this to test perlin noise values.
+
+"P9"
+Test events
+
+"P0"
+Test model names (+ and - from numpad)
