@@ -1,11 +1,11 @@
 # SA Essentials
 
-[![](http://2.bp.blogspot.com/-2AbYdYjMd6E/XUvARUn_cwI/AAAAAAAAWIg/ZmsS618bOjI7EykQGwcjLOLoG8mvWjVIACK4BGAYYCw/s1600/gta-sa-mod-pack-essentials.png)](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)
+[![](https://github.com/ins1x/sa-essentials/raw/main/CLEO/(for%20developers)/gta-sa-lib-pack-essentials.png)](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)
 
 A pack of necessary libs for the correct operation of [GTA San Andreas Multiplayer (SA-MP)](https://sampwiki.blast.hk/) and mods.  
 forked form [**JuniorDjjr**](https://github.com/JuniorDjjr) [*sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)  
 
-The main difference from the [*origina sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/) pack, is that there are only the necessary libraries and script loaders. Fixes and mods are not included! 
+The main difference from the [*original sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/) pack, is that there are only the necessary libraries and script loaders. Fixes and mods are not included! 
 
 # How use it 
 
