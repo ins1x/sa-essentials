@@ -30,6 +30,7 @@ Moonloader libs:
 - [mimgui](https://github.com/THE-FYP/mimgui)
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua)
 - [lua-requests](https://github.com/THE-FYP/lua-requests)
+- [lua-socket](https://github.com/lunarmodules/luasocket)
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4)
 
 Audio libs:
