@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SFPlugin", "SFPlugin\SFPlugin.vcxproj", "{AC0C243A-FAEA-4062-9682-3FC9E0B4D835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC0C243A-FAEA-4062-9682-3FC9E0B4D835}.Release|Win32.ActiveCfg = Release|Win32
+		{AC0C243A-FAEA-4062-9682-3FC9E0B4D835}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

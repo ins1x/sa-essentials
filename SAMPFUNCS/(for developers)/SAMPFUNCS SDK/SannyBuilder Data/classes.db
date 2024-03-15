@@ -1,0 +1,509 @@
+; -------------------------------------------
+;
+;	GTA-SA SCRIPT CLASSES
+;
+; -------------------------------------------
+; DO NOT delete keywords marked with #, $
+; -------------------------------------------
+
+
+#CLASSESLIST
+Actor
+Camera
+Car
+Model
+Player
+Object
+Marker
+Pickup
+Garage
+
+; CLEO 4 classes by Alien
+File
+Audiostream
+
+; SAMPFUNCS classes
+SAMP
+BitStream
+Math
+RakNet
+Dialog
+Render
+
+; ------------------------------------------
+;
+; keywords $BEGIN, $END should be anyway
+;
+; ------------------------------------------
+;
+; Methods syntax reference:
+;
+; Name, OpCode, Type*, HelpCode**, ("Hint")
+;
+; ------------------------------------------
+;
+; Properties syntax reference:
+;
+; ^Name,[prop1],[prop2]...[propN], ("Hint")
+;
+; [prop]: [OpCode, MathCode, Pos***, Type*, HelpCode**]
+;
+; ------------------------------------------
+;
+; * types: 
+;  0: Regular
+;  1: Conditional
+;  2: Property
+;	player.canmove($player) = true
+;	player.canmove($player, true)
+;
+; ** Help Code 
+;  0 by default
+;  -2 for deprecated items (used only for compilation of old sources)
+;
+; *** Pos:
+;
+; 1 - left (player.money += 1)
+; 2 - right ($var = player.money)
+;
+; ------------------------------------------
+;
+; Params data types:
+; %h - Handle
+; %v - variable length string (LongString)
+; %b - Boolean
+; %s - fixed length string (ShortString)
+; %f - Float
+; %i - Integer
+;
+; ------------------------------------------
+
+#CLASSES
+
+$Actor
+$BEGIN
+; properties
+^Health,[0223,=,1,0,0],[0226,=,2,0,0],("Actor%h")
+^EmulateFromPlayer,[01f5,=,2,2,0],("Player Actor%h" "Player%h")
+^MissionCar,[00d9,=,2,0,0],("Actor%h")
+^Create,[009a,=,2,2,0],("Actor%h" "PedType:^Player1^Player2^Player3^Player4^CivMale^CivFemale^Cop^Gang1^Gang2^Gang3^Gang4^Gang5^Gang6^Gang7^Gang8^Gang9^Gang10^Dealer^Medic^Fireman^Criminal^ ^Prostitute^Special^Mission1^Mission2^Mission3^Mission4^Mission5^Mission6^Mission7^Mission8" "ModelID%i" "X%f" "Y%f" "Z%f")
+^CreateAsDriver,[0129,=,2,2,0],("Actor%h" "PedType:^Player1^Player2^Player3^Player4^CivMale^CivFemale^Cop^Gang1^Gang2^Gang3^Gang4^Gang5^Gang6^Gang7^Gang8^Gang9^Gang10^Dealer^Medic^Fireman^Criminal^Prostitute^Special^Mission1^Mission2^Mission3^Mission4^Mission5^Mission6^Mission7^Mission8" "ModelID%i" "Car%h")
+^CreateAsPassenger,[01c8,=,2,2,0],("Actor%h" "PedType:^Player1^Player2^Player3^Player4^CivMale^CivFemale^Cop^Gang1^Gang2^Gang3^Gang4^Gang5^Gang6^Gang7^Gang8^Gang9^Gang10^Dealer^Medic^Fireman^Criminal^Prostitute^Special^Mission1^Mission2^Mission3^Mission4^Mission5^Mission6^Mission7^Mission8" "ModelID%i" "Car%h" "Seat%i")
+^Angle,[0172,=,2,0,0],[0173,=,1,0,0],("Actor%h")
+^LockInCurrentPosition,[04d7,=,1,2,0],("Actor%h" "%b")
+^WeaponAccuracy,[02e2,=,1,0,0],("Actor%h")
+^CurrentCar,[03c0,=,2,0,0],("Actor%h")
+
+; procs
+PutAt,00a1,0,0,("Actor%h" "X%f" "Y%f" "Z%f")
+StorePos,00A0,0,0,("Actor%h" "X: Variable" "Y: Variable" "Z: Variable")
+StoreDeadActorPos,04a5,0,0,("Actor%h" "X: Variable" "Y: Variable" "Z: Variable")
+DestroyInstantly,009b,0,0,("Actor%h")
+DestroyWithFade,034f,0,0,("Actor%h")
+SetCarWeapon,0114,0,0,("Actor%h" "Weapon%i" "Ammo%i")
+RemoveReferences,01c2,0,0,("Actor%h")
+SetImmunities,02ab,0,0,("Actor%h" "P2%i" "P3%i" "P4%i" "P5%i" "P6%i")
+RemoveFromMissionCleanupList,01c5,0,0,("Actor%h")
+SetMaxHealth,08af,0,0,("Actor%h")
+SetWeaponAmmo,017b,0,0,("Actor%h"  "WeaponNumber:^Pistol=22^Silenced=23^DesertEagle=24^Shotgun=25^Sawnoff=26^CombatShotgun=27^MicroUzi=28^MP5=29^Tec9=32^AK47=30^M4=31^Rifle=33^SniperRifle=34^RPG=35^HeatSeek=36^FlameThrower=37^Minigun=38^Camera=43^Grenede=16^TearGas=17^Molotov=18^SachetCharges=39" "Ammo%i")
+GiveWeaponAndAmmo,01b2,0,0,("Actor%h" "WeaponNumber:^Unarmed^BrassKnuckles^GolfClub^NightStick^Knife^BaseballBat^Shovel^PoolCue^Katana^Chainsaw^PurpleDildo^WhiteDildo^LongWhiteDildo^WhiteDildo2^Flowers^Cane^Grenades^TearGas^Molotov^Pistol=22^Silenced^DesertEagle^Shotgun^Sawnoff^CombatShotgun^MicroUzi^MP5^AK47^M4^Tec9^Rifle^SniperRifle^RPG^HeatSeek^FlameThrower^Minigun^SachetCharges^Detonator^SprayPaint^FireExtinguisher^Camera^NightvisionGoggles^ThermalGoggles^Parachute" "Ammo%i")
+SetWalkStyle,0245,0,0,("Actor%h" "Style%v")
+SetImmunities,02ab,0,0,("Actor%h" "Bullets%b" "Fire%b" "Explosion%b" "Collision%b" "Melee%b")
+AddArmour,035f,0,0,("Actor%h" "Armour%i")
+
+; conditions
+InCar,00db,1,0,("Actor%h" "Car%h")
+Driving,00df,1,0,("Actor%h")
+DrivingVehicleType,00dd,1,0,("Actor%h" "ModelID%i")
+DrivingTaxiVehicle,0602,1,0,("Actor%h")
+DrivingPoliceVehicle,056c,1,0,("Actor%h")
+DrivingPlane,04ab,1,0,("Actor%h")
+Dead,0118,1,0,("Actor%h")
+HasWeapon,0491,1,0,("Actor%h" "WeaponID%i")
+Stopped,02a0,1,0,("Actor%h")
+^Model,[02f2,==,1,1,0],("Actor%h")
+^Animation,[0611,==,1,1,0],("Actor%h")
+
+; deprecated
+^Armour,[035f,=,1,0,-2],("Actor%h")
+^Car,[00d9,=,2,0,-2],("Actor%h")
+
+$END
+
+$Camera
+$BEGIN
+SetBehindPlayer,0373,0,0
+SetAtPos,03CB,0,0,("X%f" "Y%f" "Z%f")
+SetPosition,015f,0,0,("X%f" "Y%f" "Z%f" "%f" "%f" "%f")
+Restore,015a,0,0
+Restore_WithJumpCut,02eb,0,0
+Shake,0003,0,0,("Duration%i")
+PointAt,0160,0,0,("X%f" "Y%f" "Z%f" "P%i")
+OnVehicle,0158,0,0,("Car%h" "P2%i" "P3%i")
+OnPed,0159,0,0,("Actor%h" "P2%i" "P3%i")
+$END
+
+$Car
+$BEGIN
+; properties
+^ToggleTaxiLight,[0216,=,1,2,0],("Car%h" "%b")
+^Create,[00a5,=,2,2,0],("Car%h" "ModelID%i" "X%f" "Y%f" "Z%f")
+^Id,[0137,==,1,1,0],("Car%h")
+^Angle,[0174,=,2,0,0],[0175,=,1,0,0],("Car%h")
+^Health,[0224,=,1,0,0],[0227,=,2,0,0],("Car%h")
+^LockInCurrentPosition,[0519,=,1,2,0],("Car%h" "%b")
+^ImmuneToNonPlayer,[02aa,=,1,2,0],("Car%h" "%b")
+^DoorStatus,[020a,=,1,2,0],("Car%h" "%i")
+^ToggleHydraulics,[07ff,=,1,2,0],("Car%h" "%b")
+^Model,[0137,==,1,1,0],[0441,=,2,0,0],("Car%h")
+
+; procs
+Destroy,00a6,0,0,("Car%h")
+DriveTo,00a7,0,0,("Car%h" "X%f" "Y%f" "Z%f")
+SetToPsychoDriver,00a8,0,0,("Car%h")
+SetToNormalDriver,00a9,0,0,("Car%h")
+StorePos,00aa,0,0,("Car%h" "X: Variable" "Y: Variable" "Z: Variable")
+PutAt,00ab,0,0,("Car%h" "X%f" "Y%f" "Z%f")
+SetMaxSpeed,00ad,0,0,("Car%h" "MaxSpeed%f")
+SetDriverBehaviour,00af,0,0,("Car%h" "Behaviour:^Nowhere^FollowRoad^KillThePlayer^DriveToPlayer=4^IgnoreRoadPaths=8"
+SetImmunities,02ac,0,0,("Car%h" "Bullets%b" "Fire%b" "Explosion%b" "Collision%b" "Melee%b")
+RemoveReferences,01c3,0,0,("Car%h")
+SetAnimation,0477,0,0,("Car%h" "Animation%i" "Duration%i")
+SetSpeedInstantly,04ba,0,0,("Car%h" "Speed%f")
+
+; conditions
+Wrecked,0119,1,0,("Car%h")
+HasHydraulics,0803,1,0,("Car%h")
+$END
+
+$Model
+$BEGIN
+Load,0247,0,0,("ModelID%i")
+Available,0248,1,0,("ModelID%i")
+Destroy,0249,0,0,("ModelID%i")
+$END
+
+$pickup
+$begin
+^Create,[0213,=,2,2,0],("Pickup%h" "ModelID%i" "Type%i" "X%f" "Y%f" "Z%f")
+Picked_up,0214,1,0,("Pickup%h")
+Destroy,0215,0,0,("Pickup%h")
+$end
+
+$Object
+$begin
+^Create,[0107,=,2,2,0],("Object%h" "ModelID%i" "X%f" "Y%f" "Z%f")
+^Init,[029b,=,2,2,0],("Object%h" "ModelID%i" "X%f" "Y%f" "Z%f")
+^Angle,[0176,=,2,0,0],[0177,=,1,0,0],("Object%h")
+^Indestructibility,[07f7,=,1,2,0],("Object%h" "%b")
+^KeepInMemory,[0550,=,1,2,0],("Object%h" "%b")
+^ToggleInMovingList,[0392,=,1,2,0],("Object%h" "%b")
+^CollisionDetection,[0382,=,1,2,0],("Object%h" "%b")
+^Model,[09cc,==,1,1,0],[0984,=,2,0,0],("Object%h")
+
+PutAt,01bc,0,0,("Object%h" "X%f" "Y%f" "Z%f")
+Throw,0381,0,0,("Object%h" "X%f" "Y%f" "Z%f")
+Destroy,0108,0,0,("Object%h")
+RemoveFromMissionCleanupList,01c7,0,0,("Object%h")
+SetImmunities,09ca,0,0,("Object%h" "Bullets%b" "Fire%b" "Explosion%b" "Collision%b" "Melee%b")
+StorePos,01bb,0,0,("Object%h" "X: Variable" "Y: Variable" "Z: Variable")
+RemoveReferences,01c4,0,0,("Object%h")
+$end
+
+$marker
+$begin
+^CreateAboveCar,[0186,=,2,2,0],("Marker%h" "Car%h")
+^CreateAboveActor,[0187,=,2,2,0],("Marker%h" "Actor%h")
+^CreateAboveObject,[0188,=,2,2,0],("Marker%h" "Object%h")
+^CreateIconAndSphere,[02a7,=,2,2,0],("Marker%h" "Icon%i" "X%f" "Y%f" "Z%f")
+^CreateIconWithoutSphere,[04ce,=,2,2,0],("Marker%h" "Icon%i" "X%f" "Y%f" "Z%f")
+TieToCar,0161,0,0,("Marker%h" "Car%h" "P3%i" "P4%i")
+Disable,0164,0,0,("Marker%h")
+SetColor,0165,0,0,("Marker%h", "Color%i")
+SetIconSize,0168,0,0,("Marker%h", "Size%i")
+$end
+
+$Player
+$BEGIN
+; properties
+^Money,[0109,+=,1,0,0],[010A,>,1,1,0],[010B,=,2,0,0],("Player%h")
+^WantedLevel,[010d,=,1,0,0],[01c0,=,2,0,0],[010f,>,1,1,0],("Player%h")
+^InfiniteRun,[0330,=,1,2,0],("Player%h" "%b")
+^CanMove,[01B4,=,1,2,0],("Player%h" "%b")
+^Create,[0053,=,2,2,0],("Player%h" "ModelID%i" "X%f" "Y%f" "Z%f")
+^RC_car,[0484,=,2,0,0],("Player%h")
+^SprintMode,[06af,=,1,2,0],("Player%h" "%b")
+
+; procs
+SetClothes,087B,0,0,("Player%h" "Texture%v" "Model%v" "BodyPart: ^Torso^Head^Legs^Shoes^Special=17")
+SetMinWantedLevel,010e,0,0,("Player%h" "Level%i")
+ClearWantedLevel,0110,0,0,("Player%h")
+MakeSafe,03ef,0,0,("Player%h")
+Build,070d,0,0,("Player%h")
+SetHandlingResponsiveness,03fd,0,0,("Player%h" "P2%i")
+SetDrunkVisuals,052c,0,0,("Player%h" "P2%i")
+
+; conditions
+Defined,0256,1,0,("Player%h")
+Controllable,03ee,1,0,("Player%h")
+Wasted,0117,1,0,("Player%h")
+PressingHorn,0122,1,0,("Player%h")
+InZone,0583,1,0,("Player%h" "Zone%s")
+InRemoteMode,0241,1,0,("Player%h")
+$END
+
+$garage
+$begin
+
+;procs
+Activate,0299,0,0,("GarageID%s")
+Deactivate,02b9,0,0,("GarageID%s")
+ChangeType,02fa,0,0,("GarageID%s" "NewType%i")
+Open,0360,0,0,("GarageID%s")
+Close,0361,0,0,("GarageID%s")
+SetToAcceptCar,021b,0,0,("GarageID%s" "Car ModelID%i")
+
+; conditions
+IsOpen,03b0,1,0,("GarageID%s")
+IsClosed,03b1,1,0,("GarageID%s")
+
+$end
+
+; ---------- CLEO 4 Classes ----------
+$File
+$begin
+^Open,[0A9A,=,2,0,0],("FileName%v" "Mode: ^NULL=0")
+;;Open,0A9A,0,0,("FileHandle%h" "FileName: ^NULL=0" "Mode: ^NULL=0")
+Close,0A9B,0,0,("FileHandle%h")
+^Size,[0A9C,=,2,0,0],("FileHandle%h")
+Read,0A9D,0,0,("FileHandle%h" "Size%i" "Destination%i")
+Write,0A9E,0,0,("FileHandle%h" "Size%i" "Source%i")
+Seek,0AD5,0,0,("FileHandle%h" "Offset%i" "Origin: ^SEEK_SET^SEEK_CUR^SEEK_END")
+EOF,0AD6,1,0,("FileHandle%h")
+ReadString,0AD7,0,0,("FileHandle%h" "Destination: ^NULL=0" "BufSize%i")
+WriteString,0AD8,0,0,("FileHandle%h" "Source: ^NULL=0")
+$end
+
+$Audiostream
+$begin
+;;Load,0AAC,0,0,("Handle%h" "FileName: ^NULL=0")
+;;Load3D,0AC1,0,0,("Handle%h" "FileName: ^NULL=0")
+^Load,[0AAC,=,2,0,0],("FileName%v")
+^Load3D,[0AC1,=,2,0,0],("FileName%v")
+PerformAction,0AAD,0,0,("Handle%h" "Action: ^STOP^PLAY^PAUSE^RESUME")
+Release,0AAE,0,0,("Handle%h")
+^Length,[0AAF,=,2,0,0],("Handle%h")
+^State,[0AB9,=,2,0,0],("Handle%h")
+^Volume,[0ABB,=,2,0,0],[0ABC,=,1,0,0],("Handle%h")
+Loop,0AC0,0,0,("Handle%h" "Flag%i")
+SetPosition,0AC2,0,0,("Handle%h" "X%f" "Y%f" "Z%f")
+LinkToActor,0AC4,0,0,("Handle%h" "Actor%h")
+LinkToObject,0AC3,0,0,("Handle%h" "Object%h")
+LinkToCar,0AC5,0,0,("Handle%h" "Car%h")
+$end
+
+; ---------- SAMPFUNCS Classes ----------
+
+$SAMP 
+$BEGIN 
+ Spawn,0AF6,0,0 
+ ^Base,[0AF7,=,2,0,0] 
+ Available,0AFA,1,0 
+ ; AddChatMessage,0AF8,0,0,("Text%s" "Color%i" "Params") 
+ ; Say,0AF9,0,0,("Text%s" "Params") 
+ RequestClass,0AFB,0,0,("ClassID%i") 
+ SendSCMEvent, 0AFC, 0, 0, ("Vehicle SAMP-ID%i" "Event ID: ^PAINTJOB=1^UPGRADE=2^COLOR=3^MODSHOPENTEREXIT=4" "Param#1%i" "Param#2%i") 
+ ApplySpecialAction,0AFD,0,0,("Action: ^NONE=0^DUCK^USEJETPACK^ENTER_VEHICLE^EXIT_VEHICLE^DANCE1^DANCE2^DANCE3^DANCE4^HANDSUP^USECELLPHONE^SITTING^STOPUSECELLPHONE^DRINK_BEER=20^SMOKE_CIGGY^DRINK_WINE^DRINK_SPRUNK") 
+ SendDeath,0AFE,0,0,("PlayerID%i" "Reason%i")
+ ^GetVehicleHandleBySAMPVehicleID,[0AFF,=,2,0,0],("Vehicle SAMP-ID%i") 
+ ^GetActorHandleByPlayerID,[0B20,=,2,0,0],("Player ID%i") 
+ ChatInputOpened,0B21,1,0 
+ ^SetSendrate,[0B22,=,1,2,0],("SendRate: ^ONFOOT=1^INCAR^AIM" "%i") 
+ ^GetPlayerHealthByActorHandle,[0B25,=,2,0,0],("Actor%h") 
+ ^GetPlayerArmorByActorHandle,[0B26,=,2,0,0],("Actor%h") 
+ ^SetGameState,[0B27,=,1,2,0],("GameState: ^WAIT_CONNECT=1^AWAIT_JOIN^CONNECTING^CONNECTED^RESTARTING^DISCONNECTED" "%i") 
+ Disconnect,0B28,0,0,("Timeout%b") 
+ SetLocalNickname,0B29,0,0,("Nickname%s") 
+ IsPlayerConnected,0B23,1,0,("PlayerID%i") 
+ ^GetPlayerStruct,[0B24,=,2,0,0],("Player ID%i") 
+ ^GetPlayerPing,[0B2A,=,2,0,0],("Player ID%i") 
+ ^GetSAMPPlayerIDByActorHandle,[0B2B,=,2,0,0],("Actor%h")
+ ^GetSAMPVehicleIDByCarHandle,[0B2C,=,2,0,0],("Car%h")
+ WriteSAMPMemory,0B2D,0,0,("Offset%i" "Value" "Size%i") 
+ ReadSAMPMemory,0B2E,0,0,("Value" "Offset%i" "Size%i") 
+ GetStreamedOutPlayerPos,0B2F,0,0,("Player ID%i" "X: Variable" "Y: Variable" "Z: Variable") 
+ SendEnterVehicle,0B30,0,0,("SAMP Vehicle ID%i" "As passenger%b") 
+ SendExitVehicle,0B31,0,0,("SAMP Vehicle ID%i") 
+ SendSpawn,0B32,0,0
+ SendDamageVehicle,0B33,0,0,("VehicleID ID%i" "PanelDamage%i" "DoorsDamage%i" "LightsDamage%i" "TiresDamage%i")
+ ^RegisterClientCommand,[0B35,=,2,0,0],("Command%s") 
+ IsCommandTyped,0B35,1,0,("Command%i" "Params%i")
+ ^GetPlayerNickname,[0B36,=,2,0,0],("PlayerID%i")
+ ^GetPlayerColor,[0B37,=,2,0,0],("PlayerID%i")
+ ConnectToServer,0B38,0,0,("IP%s" "Port%i")
+ GetCurrentServerAddress,0B39,0,0,("IP%s" "Port%i")
+ ^GetCurrentServerName,[0B3A,=,2,0,0]
+ ShowDialog,0B3B,0,0,("ID%i" "Caption%s" "Text%s" "Button1%s" "Button2%s" "Style: ^DIALOG_STYLE_MSGBOX=0^DIALOG_STYLE_INPUT^DIALOG_STYLE_LIST^DIALOG_STYLE_PASSWORD")
+ DialogRespond,0B3C,1,0,("ID%i" "Button%i" "ListItem%i" "Input%i")
+ CmdRet,0B43,0,0
+ ^Create3DText,[0B44,=,2,0,0],("Text" "Color" "X" "Y" "Z" "Distance" "ShowBehindWalls" "AttachedToPlayer" "AttachedToVehicle")
+ Destroy3DText,0B45,0,0,("ID")
+ 3DTextDefined,0B46,1,0
+ CloseDialog,0B47,0,0,("ButtonID")
+ ^GetDialogSelectedListItem,[0B48,=,2,0,0]
+ SetDialogListItem,0B49,0,0,("ID")
+ ^GetDialogInputBoxText,[0B4A,=,2,0,0]
+ SetDialogInputBoxText,0B4B,0,0,("Text")
+ IsDialogActive,0B4C,1,0,("DialogID")
+ ^GetDialogType,[0B4D,=,2,0,0]
+ ^GetDialogID,[0B4E,=,2,0,0]
+ ^GetGamestate,[0B4F,=,2,0,0]
+ ^ObjectHandleByID,[0B50,=,2,0,0],("ID")
+ ^PickupHandleByID,[0B51,=,2,0,0],("ID")
+ ^ObjectIDByHandle,[0B52,=,2,0,0],("Handle")
+ ^PickupIDByHandle,[0B53,=,2,0,0],("Handle")
+ ^ListboxItemsCount,[0B54,=,2,0,0]
+ Convert3DCoordsToScreen,0B55,0,0,("X%f" "Y%f" "Z%f" "Out X%f" "Out Y%f")
+ SetGameKeyState,0B56,0,0,("Key%i" "State%i")
+ ^PlayerAnimationID,[0B57,=,2,0,0],("PlayerID")
+ GetAnimationNameByID,0B58,0,0,("Out Name%s" "Out File%s" "ID")
+ ^AnimationIDByName,[0B59,=,2,0,0],("Name%s" "File%s")
+ GetScreenResolution,0B5A,0,0,("Out X%i" "Out Y%i")
+ GetListboxItemText,0B5B,0,0,("Item ID%i" "Out Text%s")
+ ToggleCursor,0B5D,0,0,("Toggle%b")
+ IsPlayerPaused,0B5C,1,0,("PlayerID%i)
+ IsLocalPlayerSpawned,0B61,1,0
+ ^GetPlayerSpecialAction,[0B62,=,2,0,0],("PlayerID%i")
+ UnregisterClientCommand,0B63,0,0,("Command%s")
+ IsPlayerNPC,0B64,1,0,("PlayerID%i)
+ ^GetPlayerScore,[0B65,=,2,0,0],("PlayerID%i")
+ IsCursorActive,0B8C,1,0
+ SetCursorMode,0B8D,0,0,("Mode")
+ ^GetCursorMode,[0B8E,=,2,0,0]
+ SetChatString,0B74,0,0,("Index%i" "Text%s" "Prefix%s" "Color" "PrefixColor")
+ GetChatString,0B75,0,0,("Index%i" "Text%s" "Prefix%s" "Color" "PrefixColor")
+ SetChatInputText,0B76,0,0,("Text%s")
+ GetChatInputText,0B77,0,0,("Text%s")
+ SetChatInputEnabled,0B79,0,0,("Enabled%b")
+$END
+
+$Math
+$BEGIN
+ ^Abs,[0C00,=,2,0,0],("Value%f")
+ ^RadToAngle,[0C01,=,2,0,0],("Value%f")
+ ^AngleToRad,[0C02,=,2,0,0],("Value%f")
+ ^Sine,[0C03,=,2,0,0],("Value%f")
+ ^Arcsine,[0C04,=,2,0,0],("Value%f")
+ ^Cosine,[0C05,=,2,0,0],("Value%f")
+ ^Arccosine,[0C06,=,2,0,0],("Value%f")
+ ^Tangent,[0C07,=,2,0,0],("Value%f")
+ ^Arctangent,[0C08,=,2,0,0],("Value%f")
+ ^Power,[0C09,=,2,0,0],("Value%f" "Power%f")
+ ^Ceil,[0C0A,=,2,0,0],("Value%f")
+ ^Floor,[0C0B,=,2,0,0],("Value%f")
+$END
+
+$BitStream
+$BEGIN
+ ^New,[0B3D,=,2,0,0]
+ Delete,0B3E,0,0,("BitStream")
+ Reset,0B3F,0,0,("BitStream")
+ Write,0B40,0,0,("BitStream" "Value" "Type: ^BS_TYPE_BYTE=0^BS_TYPE_BOOL^BS_TYPE_SHORT^BS_TYPE_INT^BS_TYPE_FLOAT^BS_TYPE_STRING=5^BS_TYPE_ARRAY=5^BS_TYPE_BITSTREAM=6" "Size%i")
+ ^Read,[0BE7,=,2,0,0],("BitStream" "Type")
+ ReadArray,0BE8,0,0,("BitStream" "Buffer" "Size%i")
+ ResetReadPointer,0BE9,0,0,("BitStream")
+ ResetWritePointer,0BEA,0,0,("BitStream")
+ IgnoreBits,0BEB,0,0,("BitStream" "Amount%i")
+ SetWriteOffset,0BEC,0,0,("BitStream" "Offset%i")
+ SetReadOffset,0BED,0,0,("BitStream" "Offset%i")
+ ^GetNumberOfBitsUsed,[0BEE,=,2,0,0],("BitStream")
+ ^GetNumberOfBytesUsed,[0BEF,=,2,0,0],("BitStream")
+ ^GetNumberOfUnreadBits,[0BF0,=,2,0,0],("BitStream")
+ ^GetWriteOffset,[0BF1,=,2,0,0],("BitStream")
+ ^GetReadOffset,[0BF2,=,2,0,0],("BitStream")
+ ^GetDataPtr,[0BF3,=,2,0,0],("BitStream")
+ DecodeString,0BF4,0,0,("BitStream" "Buffer" "Size%i")
+ EncodeString,0BF5,0,0,("BitStream" "String" "Size%i")
+$END
+
+$RakNet
+$BEGIN
+ ^NewBitStream,[0B3D,=,2,0,0]
+ DeleteBitStream,0B3E,0,0,("BitStream")
+ ResetBitStream,0B3F,0,0,("BitStream")
+ Write,0B40,0,0,("BitStream" "Value" "Type: ^BS_TYPE_BYTE=0^BS_TYPE_BOOL^BS_TYPE_SHORT^BS_TYPE_INT^BS_TYPE_FLOAT^BS_TYPE_STRING=5^BS_TYPE_ARRAY=5^BS_TYPE_BITSTREAM=6" "Size%i" )
+ RPC,0B41,0,0,("RPC ID: byte" "BitStream" "Priority" "Reliability" "Ordering Channel%i" "Shift Timestamp%b")
+ Send,0B42,0,0,("BitStream" "Priority" "Reliability" "Ordering Channel%i")
+ LiteRPC,0B8A,0,0,("RPC ID: byte" "BitStream")
+ LiteSend,0B8B,0,0,("BitStream")
+$END
+
+$Dialog
+$BEGIN
+ Create,0B80,0,0,("Dialog%i" "Caption%s")
+ PopEvent,0B81,1,0,("Dialog%i" "Event%i" "Control%i")
+ AddButton,0B82,0,0,("Dialog%i" "ID%i" "Caption%s" "X%i" "Y%i" "Width%i" "Height%i")
+ AddCheckBox,0B83,0,0,("Dialog%i" "ID%i" "Caption%s" "X%i" "Y%i" "Width%i" "Height%i")
+ SetRECT,0B84,0,0,("Dialog%i" "X%i" "Y%i" "Width%i" "Height%i")
+ GetRECT,0B85,0,0,("Dialog%i" "X%i" "Y%i" "Width%i" "Height%i")
+ SetVisible,0B86,0,0,("Dialog%i" "Visible%b")
+ IsVisible,0B87,1,0,("Dialog%i")
+ AddEditBox,0B88,0,0,("Dialog%i" "ID%i" "Text%s" "X%i" "Y%i" "Width%i" "Height%i")
+ GetControlText,0B89,0,0,("Dialog%i" "Control%i" "Text%i")
+ SetControlVisible,0B90,0,0,("Dialog%i" "ControlID%i" "Visible%b")
+ AddStatic,0B91,0,0,("Dialog%i" "ID%i" "Caption%s" "X%i" "Y%i" "Width%i" "Height%i")
+ CheckBoxIsChecked,0B92,1,0,("Dialog%i" "CheckBoxID%i")
+ SetBackgroundColor,0B93,0,0,("Dialog%i" "Color%i")
+ SetControlText,0B94,0,0,("Dialog%i" "Control%i" "Text%i")
+ IsControlVisible,0B95,0,0,("Dialog%i" "ControlID%i")
+ AddSlider,0B96,0,0,("Dialog%i" "ID%i" "X%i" "Y%i" "Width%i" "Height%i" "MaxValue")
+ SliderGetValue,0B97,0,0,("Dialog%i" "SliderID%i" "Value")
+ SliderSetValue,0B98,0,0,("Dialog%i" "SliderID%i" "Value")
+ AddListBox,0B99,0,0,("Dialog" "ID%i" "X%i" "Y%i" "Width%i" "Height%i")
+ ListBoxInsertElement,0B9A,0,0,("Dialog" "ListBox" "Text%s" "Data" "After%i")
+ ListBoxGetSelectedAndCount,0B9B,0,0,("Dialog" "ListBox" "Selected%i" "Count%i")
+ ListBoxDeleteElement,0B9C,0,0,("Dialog" "ListBox" "Element%i")
+ ListBoxGetTextAndData,0B9D,0,0,("Dialog" "ListBox" "Element%i" "Text" "Data")
+ SetCheckBoxChecked,0B9E,0,0,("Dialog" "CheckBox" "Checked%b")
+ EnableCaption,0B9F,0,0,("Dialog" "Enabled%b")
+ IsCaptionEnabled,0BA0,1,0,("Dialog")
+ SetMinimized,0BA1,0,0,("Dialog" "Enabled%b")
+ IsMinimized,0BA2,1,0,("Dialog")
+ FreeControl,0BA3,0,0,("Dialog" "Control%i")
+ Free,0BA4,0,0("Dialog")
+ SetControlFocus,0BA5,0,0,("Dialog" "Control%i" "Focus%b")
+ SetControlSize,0BA6,0,0,("Dialog" "Control%i" "Width%i" "Height%i")
+ GetControlSize,0BA7,0,0,("Dialog" "Control%i" "Width%i" "Height%i")
+ SetControlPos,0BA8,0,0,("Dialog" "Control%i" "X%i" "Y%i")
+ GetControlPos,0BA9,0,0,("Dialog" "Control%i" "X%i" "Y%i")
+ SetCheckBoxColor,0BAA,0,0,("Dialog" "CheckBox" "Color")
+ IsExists,0BAB,1,0,("Dialog")
+$END
+
+$Render
+$BEGIN
+ DrawLine,0B68,0,0,("Point1X%i" "Point1Y%i" "Point2X%i" "Point2Y%i" "Width%i" "Color")
+ DrawBox,0B69,0,0,("X%i" "Y%i" "Width%i" "Height%i" "Color")
+ DrawBorderedBox,0B6A,0,0,("X%i" "Y%i" "Width%i" "Height%i" "Color" "BorderSize%i" "BorderColor")
+ ^FontDrawLength,[0B6B,=,2,0,0],("Font" "Text")
+ ^FontDrawHeight,[0B6C,=,2,0,0],("Font")
+ ^CreateFont,[0B6D,=,2,0,0],("Name%s" "Height%i" "Flags%i")
+ ReleaseFont,0B6E,0,0,("Font")
+ DrawText,0B6F,0,0,("Font" "Text%s" "X%i" "Y%i" "Color")
+ DrawPolygon,0B70,0,0,("X%i" "Y%i" "Width%i" "Height%i" "Color")
+ ^LoadTexture,0B71,("File")
+ ReleaseTexture,0B72,0,0,("Texture")
+ DrawTexture,0B73,0,0,("Texture" "X%i" "Y%i" "Width%i" "Height%i" "Rotation%f" "Color")
+ Begin,0C3B,0,0,("PrimType")
+ End,0C3C,0,0
+ Color,0C3D,0,0,("Color")
+ Vertex,0C3E,0,0,("X%f" "Y%f")
+ SetTexCoord,0C3F,0,0,("X%f" "Y%f")
+ BindTexture,0C40,0,0,("Texture")
+ ^GetTextureStruct,0C41,("Texture")
+ ^GetTextureSprite,0C42,("Texture")
+ GetTextureSize,0C43,0,0,("Texture" "X" "Y")
+ SetRenderState,0C44,0,0,("State" "Value")
+$END
+
+#EOF

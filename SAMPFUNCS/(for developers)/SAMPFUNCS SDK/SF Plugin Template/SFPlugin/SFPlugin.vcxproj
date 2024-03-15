@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AC0C243A-FAEA-4062-9682-3FC9E0B4D835}</ProjectGuid>
+    <RootNamespace>SFPlugin</RootNamespace>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.sf</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_WINDOWS;_USRDLL;WIN32;_WIN32_WINNT=0x501;_USING_V110_SDK71_;SAMPFUNCS_API=__declspec(dllimport);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;SFAPI;game_api;game_api\sdk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;SFAPI;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>SAMPFUNCS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game_api\game\C3DMarker.h" />
+    <ClInclude Include="game_api\game\C3DMarkers.h" />
+    <ClInclude Include="game_api\game\CAERadioTrackManager.h" />
+    <ClInclude Include="game_api\game\CAnimBlendAssocGroup.h" />
+    <ClInclude Include="game_api\game\CAnimBlendAssociation.h" />
+    <ClInclude Include="game_api\game\CAnimBlendHierarchy.h" />
+    <ClInclude Include="game_api\game\CAnimBlendSequence.h" />
+    <ClInclude Include="game_api\game\CAnimBlendStaticAssociation.h" />
+    <ClInclude Include="game_api\game\CAnimBlock.h" />
+    <ClInclude Include="game_api\game\CAnimManager.h" />
+    <ClInclude Include="game_api\game\CAudioContainer.h" />
+    <ClInclude Include="game_api\game\CAudioEngine.h" />
+    <ClInclude Include="game_api\game\CAutomobile.h" />
+    <ClInclude Include="game_api\game\CBike.h" />
+    <ClInclude Include="game_api\game\CBmx.h" />
+    <ClInclude Include="game_api\game\CBoat.h" />
+    <ClInclude Include="game_api\game\CBuilding.h" />
+    <ClInclude Include="game_api\game\CCam.h" />
+    <ClInclude Include="game_api\game\CCamera.h" />
+    <ClInclude Include="game_api\game\CCarEnterExit.h" />
+    <ClInclude Include="game_api\game\CCarGenerator.h" />
+    <ClInclude Include="game_api\game\CCheckpoint.h" />
+    <ClInclude Include="game_api\game\CCheckpoints.h" />
+    <ClInclude Include="game_api\game\CCivilianPed.h" />
+    <ClInclude Include="game_api\game\CClock.h" />
+    <ClInclude Include="game_api\game\CColModel.h" />
+    <ClInclude Include="game_api\game\CColPoint.h" />
+    <ClInclude Include="game_api\game\CControllerConfigManager.h" />
+    <ClInclude Include="game_api\game\CCoronas.h" />
+    <ClInclude Include="game_api\game\CDamageManager.h" />
+    <ClInclude Include="game_api\game\CDoor.h" />
+    <ClInclude Include="game_api\game\CEntity.h" />
+    <ClInclude Include="game_api\game\CEvent.h" />
+    <ClInclude Include="game_api\game\CEventDamage.h" />
+    <ClInclude Include="game_api\game\CEventGroup.h" />
+    <ClInclude Include="game_api\game\CEventGunShot.h" />
+    <ClInclude Include="game_api\game\CEventList.h" />
+    <ClInclude Include="game_api\game\CExplosion.h" />
+    <ClInclude Include="game_api\game\CExplosionManager.h" />
+    <ClInclude Include="game_api\game\CFire.h" />
+    <ClInclude Include="game_api\game\CFireManager.h" />
+    <ClInclude Include="game_api\game\CFont.h" />
+    <ClInclude Include="game_api\game\CFx.h" />
+    <ClInclude Include="game_api\game\CFxManager.h" />
+    <ClInclude Include="game_api\game\CFxSystem.h" />
+    <ClInclude Include="game_api\game\CGame.h" />
+    <ClInclude Include="game_api\game\CGarage.h" />
+    <ClInclude Include="game_api\game\CGarages.h" />
+    <ClInclude Include="game_api\game\CHandlingEntry.h" />
+    <ClInclude Include="game_api\game\CHandlingManager.h" />
+    <ClInclude Include="game_api\game\CHud.h" />
+    <ClInclude Include="game_api\game\CKeyGen.h" />
+    <ClInclude Include="game_api\game\CMarker.h" />
+    <ClInclude Include="game_api\game\CMenuManager.h" />
+    <ClInclude Include="game_api\game\CModelInfo.h" />
+    <ClInclude Include="game_api\game\CMonsterTruck.h" />
+    <ClInclude Include="game_api\game\CObject.h" />
+    <ClInclude Include="game_api\game\Common.h" />
+    <ClInclude Include="game_api\game\CPad.h" />
+    <ClInclude Include="game_api\game\CParticle.h" />
+    <ClInclude Include="game_api\game\CParticleObject.h" />
+    <ClInclude Include="game_api\game\CParticleSystemManager.h" />
+    <ClInclude Include="game_api\game\CPathFind.h" />
+    <ClInclude Include="game_api\game\CPed.h" />
+    <ClInclude Include="game_api\game\CPedDamageResponse.h" />
+    <ClInclude Include="game_api\game\CPedDamageResponseCalculator.h" />
+    <ClInclude Include="game_api\game\CPedIK.h" />
+    <ClInclude Include="game_api\game\CPedIntelligence.h" />
+    <ClInclude Include="game_api\game\CPedModelInfo.h" />
+    <ClInclude Include="game_api\game\CPedSound.h" />
+    <ClInclude Include="game_api\game\CPhysical.h" />
+    <ClInclude Include="game_api\game\CPickup.h" />
+    <ClInclude Include="game_api\game\CPickups.h" />
+    <ClInclude Include="game_api\game\CPlane.h" />
+    <ClInclude Include="game_api\game\CPlayerInfo.h" />
+    <ClInclude Include="game_api\game\CPlayerPed.h" />
+    <ClInclude Include="game_api\game\CPointLights.h" />
+    <ClInclude Include="game_api\game\CPools.h" />
+    <ClInclude Include="game_api\game\CPopulation.h" />
+    <ClInclude Include="game_api\game\CProjectile.h" />
+    <ClInclude Include="game_api\game\CProjectileInfo.h" />
+    <ClInclude Include="game_api\game\CQuadBike.h" />
+    <ClInclude Include="game_api\game\CRadar.h" />
+    <ClInclude Include="game_api\game\CRegisteredCorona.h" />
+    <ClInclude Include="game_api\game\CRemote.h" />
+    <ClInclude Include="game_api\game\CRenderWare.h" />
+    <ClInclude Include="game_api\game\CRestart.h" />
+    <ClInclude Include="game_api\game\CRopes.h" />
+    <ClInclude Include="game_api\game\CSettings.h" />
+    <ClInclude Include="game_api\game\CStats.h" />
+    <ClInclude Include="game_api\game\CStreaming.h" />
+    <ClInclude Include="game_api\game\CTaskManagementSystem.h" />
+    <ClInclude Include="game_api\game\CTaskManager.h" />
+    <ClInclude Include="game_api\game\CTasks.h" />
+    <ClInclude Include="game_api\game\CText.h" />
+    <ClInclude Include="game_api\game\CTheCarGenerators.h" />
+    <ClInclude Include="game_api\game\CTrailer.h" />
+    <ClInclude Include="game_api\game\CVehicle.h" />
+    <ClInclude Include="game_api\game\CVehicleScanner.h" />
+    <ClInclude Include="game_api\game\CVisibilityPlugins.h" />
+    <ClInclude Include="game_api\game\CWanted.h" />
+    <ClInclude Include="game_api\game\CWater.h" />
+    <ClInclude Include="game_api\game\CWaterManager.h" />
+    <ClInclude Include="game_api\game\CWeapon.h" />
+    <ClInclude Include="game_api\game\CWeaponInfo.h" />
+    <ClInclude Include="game_api\game\CWeaponStat.h" />
+    <ClInclude Include="game_api\game\CWeaponStatManager.h" />
+    <ClInclude Include="game_api\game\CWeather.h" />
+    <ClInclude Include="game_api\game\CWorld.h" />
+    <ClInclude Include="game_api\game\RenderWare.h" />
+    <ClInclude Include="game_api\game\Task.h" />
+    <ClInclude Include="game_api\game\TaskAttack.h" />
+    <ClInclude Include="game_api\game\TaskBasic.h" />
+    <ClInclude Include="game_api\game\TaskCar.h" />
+    <ClInclude Include="game_api\game\TaskCarAccessories.h" />
+    <ClInclude Include="game_api\game\TaskGoTo.h" />
+    <ClInclude Include="game_api\game\TaskIK.h" />
+    <ClInclude Include="game_api\game\TaskJumpFall.h" />
+    <ClInclude Include="game_api\game\TaskPhysicalResponse.h" />
+    <ClInclude Include="game_api\game\TaskSecondary.h" />
+    <ClInclude Include="game_api\game\TaskTypes.h" />
+    <ClInclude Include="game_api\game_api.h" />
+    <ClInclude Include="game_api\sdk\CBox.h" />
+    <ClInclude Include="game_api\sdk\CMatrix.h" />
+    <ClInclude Include="game_api\sdk\CMatrix_Pad.h" />
+    <ClInclude Include="game_api\sdk\CQuat.h" />
+    <ClInclude Include="game_api\sdk\CRect2D.h" />
+    <ClInclude Include="game_api\sdk\CSphere.h" />
+    <ClInclude Include="game_api\sdk\CVector.h" />
+    <ClInclude Include="game_api\sdk\CVector2D.h" />
+    <ClInclude Include="game_api\sdk\CVector4D.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Buffer.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.FastHashMap.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.FastHashSet.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Game.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Game.hpp" />
+    <ClInclude Include="game_api\sdk\SharedUtil.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.HashMap.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.hpp" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Map.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.MemAccess.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.MemAccess.hpp" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Misc.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Misc.hpp" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Time.h" />
+    <ClInclude Include="game_api\sdk\SharedUtil.Time.hpp" />
+    <ClInclude Include="game_api\sdk\SString.h" />
+    <ClInclude Include="game_api\sdk\SString.hpp" />
+    <ClInclude Include="game_api\sdk\UTF8.h" />
+    <ClInclude Include="game_api\sdk\WString.h" />
+    <ClInclude Include="game_api\sdk\WString.hpp" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="SFAPI\SAMPFUNCS_API.h" />
+    <ClInclude Include="SFAPI\SFCLEO.h" />
+    <ClInclude Include="SFAPI\SFGame.h" />
+    <ClInclude Include="SFAPI\SFRakNet.h" />
+    <ClInclude Include="SFAPI\SFRender.h" />
+    <ClInclude Include="SFAPI\SFSAMP.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
