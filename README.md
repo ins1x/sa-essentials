@@ -32,6 +32,7 @@ Moonloader libs:
 - [lua-requests](https://github.com/THE-FYP/lua-requests)
 - [lua-socket](https://github.com/lunarmodules/luasocket)
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4)
+- [cjson](https://github.com/openresty/lua-cjson/tree/master)
 
 Audio libs:
 - [eax.dll (Environmental Audio Extensions)](https://gamedev.ru/code/terms/EAX)
