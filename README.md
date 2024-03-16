@@ -16,9 +16,9 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 # List of libraries
 
 ### Loaders:
-- [Silents ASI Loader](http://www.gtagarage.com/mods/show.php?id=21709) - This is a DLL file which adds ASI plugin loading functionality to San Andreas.
-- [Moonloader](https://gtaforums.com/topic/890987-moonloader/) - is a modification for GTA: San Andreas that brings new ability to use Lua scripts made by mods creators. 
 - [ModLoader](https://gtaforums.com/topic/669520-mod-loader/) - is a plugin for Grand Theft Auto III, Vice City and San Andreas that adds an easy and user-friendly way to install and uninstall modifications into the game
+- [Moonloader](https://gtaforums.com/topic/890987-moonloader/) - is a modification for GTA: San Andreas that brings new ability to use Lua scripts made by mods creators. 
+- [Silents ASI Loader](http://www.gtagarage.com/mods/show.php?id=21709) - This is a DLL file which adds ASI plugin loading functionality to San Andreas.
 
 ### CLEO:
 - [CLEO 4](http://cleo.li/download.html) - is a hugely popular extensible library plugin which brings new possibilities in scripting for the game Grand Theft Auto: San Andreas by Rockstar Games, allowing the use of thousands of unique mods which change or expand the gameplay. 
@@ -28,26 +28,27 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 > See the https://cleo.li/plugins for some of the available [CLEO plugins](https://cleo.li/download.html#plugins).
 
 ### Moonloader modules:
-- [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
-- [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
+- [cjson](https://github.com/openresty/lua-cjson/tree/master) - Lua CJSON is a fast JSON encoding/parsing module for Lua
+- [compat](https://github.com/lunarmodules/lua-compat-5.3) - Compatibility module providing Lua-5.3-style APIs for Lua 5.2 and 5.1
+- [copas](https://github.com/lunarmodules/copas/tree/master) - Dispatcher based on coroutines that can be used by TCP/IP servers
+- [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
 - [imgui](https://github.com/ocornut/imgui) - ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
-- [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
-- [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
+- [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
 - [lua-requests](https://github.com/THE-FYP/lua-requests) - The same friendly Python Requests interface for Lua
 - [lua-socket](https://github.com/lunarmodules/luasocket) - Network support for the Lua language
-- [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
-- [cjson](https://github.com/openresty/lua-cjson/tree/master) - Lua CJSON is a fast JSON encoding/parsing module for Lua
 - [LuaJIT](https://luajit.org/) - Just-In-Time Compiler for Lua
-- [copas](https://github.com/lunarmodules/copas/tree/master) - Dispatcher based on coroutines that can be used by TCP/IP servers
-- [compat](https://github.com/lunarmodules/lua-compat-5.3) - Compatibility module providing Lua-5.3-style APIs for Lua 5.2 and 5.1
+- [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
+- [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
+- [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
+- [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 
 > See the https://luarocks.org/modules/fyp for some of the available [Lua modules](https://github.com/orgs/lunarmodules/repositories?type=all).
 
 ### Audio libs:
 - [eax.dll](https://gamedev.ru/code/terms/EAX) - Environmental Audio Extensions
+- [bassmix.dll](https://www.un4seen.com/) - BASS audio library
 - [ogg.dll](https://www.rarewares.org/ogg-libraries.php) - Ogg Vorbis Dynamic Link Library
 - [vorbis.dll](https://xiph.org/vorbis/) - Vorbis Dynamic Link Library
-- [bassmix.dll](https://www.un4seen.com/) - BASS audio library
 
 ### Microsoft libs:
 - [msvcr100d.dll](https://answers.microsoft.com/en-us/windows/forum/all/msvcr100ddll/a1a3d052-daf1-4407-af72-dbaeb49fdbb8) - Microsoft Visual C++ Redistributable (MSVC)

@@ -1,7 +1,6 @@
-*.lua linguist-detectable=false
-*.c linguist-detectable=false
-*.cpp linguist-detectable=false
-*.cleo linguist-detectable=false
-*.asi linguist-detectable=false
-*.dll linguist-detectable=false
+CLEO/* -linguist-vendored
+modloader/* -linguist-vendored
+moonloader/* -linguist-vendored
+SAMPFUNCS/* -linguist-vendored
+scripts/* -linguist-vendored
 * text=auto
