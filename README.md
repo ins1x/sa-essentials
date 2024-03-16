@@ -34,6 +34,7 @@ Moonloader libs:
 - [cjson](https://github.com/openresty/lua-cjson/tree/master)
 - [LuaJIT](https://luajit.org/)
 - [copas](https://github.com/lunarmodules/copas/tree/master)
+- [compat](https://github.com/lunarmodules/lua-compat-5.3)
 
 Audio libs:
 - [eax.dll (Environmental Audio Extensions)](https://gamedev.ru/code/terms/EAX)
