@@ -1,6 +1,2 @@
-CLEO/* -linguist-vendored
-modloader/* -linguist-vendored
-moonloader/* -linguist-vendored
-SAMPFUNCS/* -linguist-vendored
-scripts/* -linguist-vendored
+*.* linguist-detectable=false
 * text=auto
