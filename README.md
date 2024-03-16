@@ -3,16 +3,15 @@
 [![](https://github.com/ins1x/sa-essentials/raw/main/CLEO/(for%20developers)/gta-sa-lib-pack-essentials.png)](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)
 
 A pack of necessary libs for the correct operation of [GTA San Andreas Multiplayer (SA-MP)](https://sampwiki.blast.hk/) and mods.  
-forked form [**JuniorDjjr**](https://github.com/JuniorDjjr) [*sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)  
 
-The main difference from the [*original sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/) pack, is that there are only the necessary libraries and script loaders. Fixes and mods are not included! 
+The main difference from the [*original sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/) pack, is that there are only the necessary libraries and script loaders. Fixes and mods are not included! Only the original versions of the libraries are collected here. The list of all libraries and their repositories is below.
 
 # How use it 
 
 You should already have [GTA:SA and SA:MP](https://www.sa-mp.mp/downloads/) installed.
-After install, just copy all files from archive to your Gta San Andreas game directory.
+After install, just copy all files from archive to your Gta San Andreas game directory. You can install all the necessary libraries and not waste time, installing separately and resolving version conflicts. You can just as quickly find the missing libraries, and download them without worrying about authenticity.
 
-> Before replacing libs, save the replacement files in case of a version conflicts!
+> If you are not installing on a clean gta, but on your own assembly, then do èefore replacing libs, save the replacement files!
 
 # List of libraries
 
@@ -47,3 +46,7 @@ Microsoft libs:
 Other libs:
 - [libcurl](https://curl.se/libcurl/)
 - [zlib](https://zlib.net/)
+
+---
+All rights to the libraries listed above belong to their owners.  
+Repository forked form [**JuniorDjjr**](https://github.com/JuniorDjjr) [*sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)  
