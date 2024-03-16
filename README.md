@@ -34,6 +34,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
 - [imgui](https://github.com/ocornut/imgui) - ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
+- [LuaFileSystem](https://luarocks.org/modules/fyp/luafilesystem) - File System Library for the Lua Programming Language
 - [lua-requests](https://github.com/THE-FYP/lua-requests) - The same friendly Python Requests interface for Lua
 - [lua-socket](https://github.com/lunarmodules/luasocket) - Network support for the Lua language
 - [LuaJIT](https://luajit.org/) - Just-In-Time Compiler for Lua
@@ -41,6 +42,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
+- [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
 > See the https://luarocks.org/modules/fyp for some of the available [Lua modules](https://github.com/orgs/lunarmodules/repositories?type=all).
 
