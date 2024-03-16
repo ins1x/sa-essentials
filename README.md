@@ -15,41 +15,49 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 
 # List of libraries
 
-Loaders:
-- [Silents ASI Loader](http://www.gtagarage.com/mods/show.php?id=21709)
-- [CLEO 4](http://cleo.li/download.html)
-- [CLEO +](https://www.mixmods.com.br/2023/10/cleoplus/)
-- [SAMPFUNCS](https://www.blast.hk/threads/17/)
-- [Moonloader](https://gtaforums.com/topic/890987-moonloader/)
-- [ModLoader](https://gtaforums.com/topic/669520-mod-loader/)
+### Loaders:
+- [Silents ASI Loader](http://www.gtagarage.com/mods/show.php?id=21709) - This is a DLL file which adds ASI plugin loading functionality to San Andreas.
+- [Moonloader](https://gtaforums.com/topic/890987-moonloader/) - is a modification for GTA: San Andreas that brings new ability to use Lua scripts made by mods creators. 
+- [ModLoader](https://gtaforums.com/topic/669520-mod-loader/) - is a plugin for Grand Theft Auto III, Vice City and San Andreas that adds an easy and user-friendly way to install and uninstall modifications into the game
 
-Moonloader libs:
-- [MoonAdditions](https://github.com/THE-FYP/MoonAdditions)
-- [imgui](https://github.com/ocornut/imgui)
-- [mimgui](https://github.com/THE-FYP/mimgui)
-- [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua)
-- [lua-requests](https://github.com/THE-FYP/lua-requests)
-- [lua-socket](https://github.com/lunarmodules/luasocket)
-- [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4)
-- [cjson](https://github.com/openresty/lua-cjson/tree/master)
-- [LuaJIT](https://luajit.org/)
-- [copas](https://github.com/lunarmodules/copas/tree/master)
-- [compat](https://github.com/lunarmodules/lua-compat-5.3)
+### CLEO:
+- [CLEO 4](http://cleo.li/download.html) - is a hugely popular extensible library plugin which brings new possibilities in scripting for the game Grand Theft Auto: San Andreas by Rockstar Games, allowing the use of thousands of unique mods which change or expand the gameplay. 
+- [CLEO +](https://www.mixmods.com.br/2023/10/cleoplus/) - a CLEO 4 plugin by Junior_Djjr adding about 300 new opcodes
+- [SAMPFUNCS](https://www.blast.hk/threads/17/) - is an add-on to the CLEO 4 library, globally expanding the capabilities of scriptwriters.
 
-Audio libs:
-- [eax.dll (Environmental Audio Extensions)](https://gamedev.ru/code/terms/EAX)
-- [ogg.dll (Ogg Vorbis Dynamic Link Library)](https://www.rarewares.org/ogg-libraries.php)
-- [vorbis.dll (Vorbis Dynamic Link Library)](https://xiph.org/vorbis/)
-- [bassmix.dll (BASS audio library)](https://www.un4seen.com/)
+> See the https://cleo.li/plugins for some of the available [CLEO plugins](https://cleo.li/download.html#plugins).
 
-Microsoft libs:
-- [msvcr100d.dll (MSVC Redistributable)](https://answers.microsoft.com/en-us/windows/forum/all/msvcr100ddll/a1a3d052-daf1-4407-af72-dbaeb49fdbb8)
-- [d3dx9_25.dll, d3dx9_40.dll, d3dx9_43.dll (DirectX D3DX9)](https://www.microsoft.com/ru-ru/download/details.aspx?id=35)
+### Moonloader modules:
+- [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
+- [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
+- [imgui](https://github.com/ocornut/imgui) - ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
+- [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
+- [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
+- [lua-requests](https://github.com/THE-FYP/lua-requests) - The same friendly Python Requests interface for Lua
+- [lua-socket](https://github.com/lunarmodules/luasocket) - Network support for the Lua language
+- [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
+- [cjson](https://github.com/openresty/lua-cjson/tree/master) - Lua CJSON is a fast JSON encoding/parsing module for Lua
+- [LuaJIT](https://luajit.org/) - Just-In-Time Compiler for Lua
+- [copas](https://github.com/lunarmodules/copas/tree/master) - Dispatcher based on coroutines that can be used by TCP/IP servers
+- [compat](https://github.com/lunarmodules/lua-compat-5.3) - Compatibility module providing Lua-5.3-style APIs for Lua 5.2 and 5.1
 
-Other libs:
-- [libcurl](https://curl.se/libcurl/)
-- [zlib](https://zlib.net/)
+> See the https://luarocks.org/modules/fyp for some of the available [Lua modules](https://github.com/orgs/lunarmodules/repositories?type=all).
+
+### Audio libs:
+- [eax.dll](https://gamedev.ru/code/terms/EAX) - Environmental Audio Extensions
+- [ogg.dll](https://www.rarewares.org/ogg-libraries.php) - Ogg Vorbis Dynamic Link Library
+- [vorbis.dll](https://xiph.org/vorbis/) - Vorbis Dynamic Link Library
+- [bassmix.dll](https://www.un4seen.com/) - BASS audio library
+
+### Microsoft libs:
+- [msvcr100d.dll](https://answers.microsoft.com/en-us/windows/forum/all/msvcr100ddll/a1a3d052-daf1-4407-af72-dbaeb49fdbb8) - Microsoft Visual C++ Redistributable (MSVC)
+- [d3dx9_25.dll, d3dx9_40.dll, d3dx9_43.dll](https://www.microsoft.com/ru-ru/download/details.aspx?id=35) - DirectX Runtime Environment for End Users
+
+### Other libs:
+- [libcurl](https://curl.se/libcurl/) - The multiprotocol file transfer library
+- [zlib](https://zlib.net/) - A Massively Spiffy Yet Delicately Unobtrusive Compression Library
 
 ---
+
 All rights to the libraries listed above belong to their owners.  
 Repository forked form [**JuniorDjjr**](https://github.com/JuniorDjjr) [*sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)  
