@@ -56,11 +56,12 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [vorbis.dll](https://xiph.org/vorbis/) - Vorbis Dynamic Link Library
 
 ### Microsoft libs:
-- [msvcr100d.dll](https://answers.microsoft.com/en-us/windows/forum/all/msvcr100ddll/a1a3d052-daf1-4407-af72-dbaeb49fdbb8) - Microsoft Visual C++ Redistributable (MSVC)
+- [msvcr100d.dll, concrt140.dll](https://answers.microsoft.com/en-us/windows/forum/all/msvcr100ddll/a1a3d052-daf1-4407-af72-dbaeb49fdbb8) - Microsoft Visual C++ Redistributable (MSVC)
 - [d3dx9_25.dll, d3dx9_40.dll, d3dx9_43.dll](https://www.microsoft.com/ru-ru/download/details.aspx?id=35) - DirectX Runtime Environment for End Users
 
 ### Other libs:
 - [libcurl](https://curl.se/libcurl/) - The multiprotocol file transfer library
+- [minhook](https://github.com/TsudaKageyu/minhook) - The Minimalistic x86/x64 API Hooking Library for Windows
 - [zlib](https://zlib.net/) - A Massively Spiffy Yet Delicately Unobtrusive Compression Library
 
 ---
