@@ -32,6 +32,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [compat](https://github.com/lunarmodules/lua-compat-5.3) - Compatibility module providing Lua-5.3-style APIs for Lua 5.2 and 5.1
 - [copas](https://github.com/lunarmodules/copas/tree/master) - Dispatcher based on coroutines that can be used by TCP/IP servers
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
+- [fAwesome](https://www.blast.hk/threads/111224/) - Pack fAwesome fonts v4,v5,v6
 - [imgui](https://github.com/ocornut/imgui) - ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
 - [LuaFileSystem](https://luarocks.org/modules/fyp/luafilesystem) - File System Library for the Lua Programming Language
@@ -42,6 +43,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
+- [MoonMonet](https://github.com/Northn/MoonMonet) - A library that generates Monet-style color accents
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 - [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
