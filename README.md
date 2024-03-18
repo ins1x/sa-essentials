@@ -52,7 +52,9 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 ### Audio libs:
 - [eax.dll](https://gamedev.ru/code/terms/EAX) - Environmental Audio Extensions
 - [bassmix.dll](https://www.un4seen.com/) - BASS audio library
-- [bass_fx.dll](https://www.un4seen.com/doc/#bass/bass_fx.html) - BASS_FX provides several effects, including tempo & pitch control.
+- [bass_fx.dll](https://www.un4seen.com/doc/#bass/bass_fx.html) - is an extension to the BASS audio library, provides several effects, including tempo & pitch control.
+- [basswasapi.dll](https://www.un4seen.com/doc/#basswasapi/basswasapi.html) - is an extension to the BASS audio library, providing the ability
+to use WASAPI output and input.
 - [ogg.dll](https://www.rarewares.org/ogg-libraries.php) - Ogg Vorbis Dynamic Link Library
 - [vorbis.dll](https://xiph.org/vorbis/) - Vorbis Dynamic Link Library
 
