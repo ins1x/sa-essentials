@@ -37,7 +37,8 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
 - [LuaFileSystem](https://luarocks.org/modules/fyp/luafilesystem) - File System Library for the Lua Programming Language
 - [lua-requests](https://github.com/THE-FYP/lua-requests) - The same friendly Python Requests interface for Lua
-- [LuaSec](https://luarocks.org/modules/fyp/luasec) - A binding for OpenSSL library to provide TLS/SSL communication over LuaSocket.
+- [LuaSec](https://luarocks.org/modules/fyp/luasec) - A binding for OpenSSL library to provide TLS/SSL communication over LuaSocket
+- [luasql-sqlite](https://lunarmodules.github.io/luasql) - Is a simple interface from Lua to a DBMS Sqlite
 - [lua-socket](https://github.com/lunarmodules/luasocket) - Network support for the Lua language
 - [LuaJIT](https://luajit.org/) - Just-In-Time Compiler for Lua
 - [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
