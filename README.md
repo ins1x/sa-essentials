@@ -33,7 +33,8 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [copas](https://github.com/lunarmodules/copas/tree/master) - Dispatcher based on coroutines that can be used by TCP/IP servers
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
 - [fAwesome](https://www.blast.hk/threads/111224/) - Pack fAwesome fonts v4,v5,v6
-- [imgui](https://github.com/ocornut/imgui) - ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
+- [imgui](https://github.com/ocornut/imgui) - ImGui Bloat-free Graphical User interface with minimal dependencies
+- [lanes](https://luarocks.org/modules/benoitgermain/lanes) - Lanes is a lightweight, native, lazy evaluating multithreading library for Lua
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
 - [LuaFileSystem](https://luarocks.org/modules/fyp/luafilesystem) - File System Library for the Lua Programming Language
 - [lua-requests](https://github.com/THE-FYP/lua-requests) - The same friendly Python Requests interface for Lua
