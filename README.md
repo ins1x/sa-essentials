@@ -46,6 +46,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
 - [MoonMonet](https://github.com/Northn/MoonMonet) - A library that generates Monet-style color accents
+- [RakLua](https://www.blast.hk/threads/69433/) - A new library for interacting with RakNet and BitStream
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 - [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
