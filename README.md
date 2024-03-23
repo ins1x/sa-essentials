@@ -31,8 +31,11 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [cjson](https://github.com/openresty/lua-cjson/tree/master) - Lua CJSON is a fast JSON encoding/parsing module for Lua
 - [compat](https://github.com/lunarmodules/lua-compat-5.3) - Compatibility module providing Lua-5.3-style APIs for Lua 5.2 and 5.1
 - [copas](https://github.com/lunarmodules/copas/tree/master) - Dispatcher based on coroutines that can be used by TCP/IP servers
+- [effil](https://github.com/effil/effil) - Multithreading support for Lua
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
 - [fAwesome](https://www.blast.hk/threads/111224/) - Pack fAwesome fonts v4,v5,v6
+- [htmlparse](https://github.com/msva/lua-htmlparser) - An HTML parser for lua
+- [inspect](https://github.com/kikito/inspect.lua) - Human-readable representation of Lua tables
 - [imgui](https://github.com/ocornut/imgui) - ImGui Bloat-free Graphical User interface with minimal dependencies
 - [lanes](https://luarocks.org/modules/benoitgermain/lanes) - Lanes is a lightweight, native, lazy evaluating multithreading library for Lua
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
@@ -42,11 +45,16 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [luasql-sqlite](https://lunarmodules.github.io/luasql) - Is a simple interface from Lua to a DBMS Sqlite
 - [lua-socket](https://github.com/lunarmodules/luasocket) - Network support for the Lua language
 - [LuaJIT](https://luajit.org/) - Just-In-Time Compiler for Lua
+- [lume](https://github.com/rxi/lume) - A collection of functions for Lua, geared towards game development
+- [lustache](https://luarocks.org/modules/luarocks/lustache) - Logic-less mustache templates with Lua
 - [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
 - [MoonMonet](https://github.com/Northn/MoonMonet) - A library that generates Monet-style color accents
+- [penlight](https://luarocks.org/modules/steved/penlight) -
+A set of pure Lua libraries focusing on input data handling 
 - [RakLua](https://www.blast.hk/threads/69433/) - A new library for interacting with RakNet and BitStream
+- [RKeys](https://github.com/AnWuPP/rkeys) - Register HotKey for MoonLoader
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 - [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
@@ -55,9 +63,9 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 ### Audio libs:
 - [eax.dll](https://gamedev.ru/code/terms/EAX) - Environmental Audio Extensions
 - [bassmix.dll](https://www.un4seen.com/) - BASS audio library
-- [bass_fx.dll](https://www.un4seen.com/doc/#bass/bass_fx.html) - is an extension to the BASS audio library, provides several effects, including tempo & pitch control.
+- [bass_fx.dll](https://www.un4seen.com/doc/#bass/bass_fx.html) - is an extension to the BASS audio library, provides several effects, including tempo & pitch control
 - [basswasapi.dll](https://www.un4seen.com/doc/#basswasapi/basswasapi.html) - is an extension to the BASS audio library, providing the ability
-to use WASAPI output and input.
+to use WASAPI output and input
 - [ogg.dll](https://www.rarewares.org/ogg-libraries.php) - Ogg Vorbis Dynamic Link Library
 - [vorbis.dll](https://xiph.org/vorbis/) - Vorbis Dynamic Link Library
 
