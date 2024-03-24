@@ -39,6 +39,8 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [imgui](https://github.com/ocornut/imgui) - ImGui Bloat-free Graphical User interface with minimal dependencies
 - [lanes](https://luarocks.org/modules/benoitgermain/lanes) - Lanes is a lightweight, native, lazy evaluating multithreading library for Lua
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
+- [LPeg](https://luarocks.org/modules/gvvaughan/lpeg) - A pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs)
+- [Lrexlib-PCRE](https://luarocks.org/modules/rrt/lrexlib-pcre) - Is a regular expression library, which provides bindings for POSIX and PCRE regular expression libs
 - [LuaFileSystem](https://luarocks.org/modules/fyp/luafilesystem) - File System Library for the Lua Programming Language
 - [lua-requests](https://github.com/THE-FYP/lua-requests) - The same friendly Python Requests interface for Lua
 - [LuaSec](https://luarocks.org/modules/fyp/luasec) - A binding for OpenSSL library to provide TLS/SSL communication over LuaSocket
@@ -51,11 +53,11 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
 - [MoonMonet](https://github.com/Northn/MoonMonet) - A library that generates Monet-style color accents
-- [penlight](https://luarocks.org/modules/steved/penlight) -
-A set of pure Lua libraries focusing on input data handling 
+- [penlight](https://luarocks.org/modules/steved/penlight) - A set of pure Lua libraries focusing on input data handling 
 - [RakLua](https://www.blast.hk/threads/69433/) - A new library for interacting with RakNet and BitStream
 - [RKeys](https://github.com/AnWuPP/rkeys) - Register HotKey for MoonLoader
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
+- [SFlua](https://github.com/SF-lua/SF.lua) - SA:MP functions for MoonLoader
 - [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
 > See the https://luarocks.org/modules/fyp for some of the available [Lua modules](https://github.com/orgs/lunarmodules/repositories?type=all).
