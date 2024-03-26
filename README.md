@@ -37,6 +37,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [htmlparse](https://github.com/msva/lua-htmlparser) - An HTML parser for lua
 - [inspect](https://github.com/kikito/inspect.lua) - Human-readable representation of Lua tables
 - [imgui](https://github.com/ocornut/imgui) - ImGui Bloat-free Graphical User interface with minimal dependencies
+- [Imgui Addons](https://www.blast.hk/threads/27544/) - collects several elements for imgui into one common library
 - [lanes](https://luarocks.org/modules/benoitgermain/lanes) - Lanes is a lightweight, native, lazy evaluating multithreading library for Lua
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
 - [LPeg](https://luarocks.org/modules/gvvaughan/lpeg) - A pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs)
@@ -50,6 +51,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [lume](https://github.com/rxi/lume) - A collection of functions for Lua, geared towards game development
 - [lustache](https://luarocks.org/modules/luarocks/lustache) - Logic-less mustache templates with Lua
 - [mimgui](https://github.com/THE-FYP/mimgui) - Dear ImGui for MoonLoader
+- [Mimgui Addons](https://www.blast.hk/threads/127255/) - collects several elements for mimgui into one common library
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
 - [MoonMonet](https://github.com/Northn/MoonMonet) - A library that generates Monet-style color accents
@@ -58,6 +60,8 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [RKeys](https://github.com/AnWuPP/rkeys) - Register HotKey for MoonLoader
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 - [SFlua](https://github.com/SF-lua/SF.lua) - SA:MP functions for MoonLoader
+- [SNET](https://github.com/SLMP-Team/SNET) - cross-platform, open source, network library
+- [strings](https://github.com/c0sui/lua_strings) - Custom string methods for the lua
 - [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
 > See the https://luarocks.org/modules/fyp for some of the available [Lua modules](https://github.com/orgs/lunarmodules/repositories?type=all).
