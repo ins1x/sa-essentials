@@ -76,8 +76,9 @@ to use WASAPI output and input
 - [vorbis.dll](https://xiph.org/vorbis/) - Vorbis Dynamic Link Library
 
 ### Microsoft libs:
-- [msvcr100d.dll, concrt140.dll](https://answers.microsoft.com/en-us/windows/forum/all/msvcr100ddll/a1a3d052-daf1-4407-af72-dbaeb49fdbb8) - Microsoft Visual C++ Redistributable (MSVC)
+- [msvcr100d.dll](https://www.mixmods.com.br/2015/08/download-de-todas-as-dll-que-voce-precisa/) - Microsoft Visual C++ Redistributable (MSVC) Debug
 - [d3dx9_25.dll, d3dx9_40.dll, d3dx9_43.dll](https://www.microsoft.com/ru-ru/download/details.aspx?id=35) - DirectX Runtime Environment for End Users
+> See the [AIO Repack for latest Microsoft Visual C++ Redistributable Runtimes](https://github.com/abbodi1406/vcredist/releases)
 
 ### Other libs:
 - [libcurl](https://curl.se/libcurl/) - The multiprotocol file transfer library
