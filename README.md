@@ -4,14 +4,14 @@
 
 A pack of necessary libs for the correct operation of [GTA San Andreas Multiplayer (SA-MP)](https://sampwiki.blast.hk/) and mods.  
 
-The main difference from the [*original sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/) pack, is that there are only the necessary libraries and script loaders. Fixes and mods are not included! Only the original versions of the libraries are collected here. The list of all libraries and their repositories is below.
+Repository forked form [**JuniorDjjr**](https://github.com/JuniorDjjr) [*sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/). This set is wider than the original one, but does not contain fixes and third-party mods! Only the original versions of the libraries are collected here. The list of all libraries and their repositories is below.
 
 # How use it 
 
 You should already have [GTA:SA and SA:MP](https://www.sa-mp.mp/downloads/) installed.
 After install, just copy all files from archive to your Gta San Andreas game directory. You can install all the necessary libraries and not waste time, installing separately and resolving version conflicts. You can just as quickly find the missing libraries, and download them without worrying about authenticity.
 
-> If you are not installing on a clean gta, but on your own assembly, then do èefore replacing libs, save the replacement files!
+> If you are not installing on a clean gta, but on your own assembly, then do before replacing libs, save the replacement files!
 
 # List of libraries
 
@@ -84,8 +84,3 @@ to use WASAPI output and input
 - [libcurl](https://curl.se/libcurl/) - The multiprotocol file transfer library
 - [minhook](https://github.com/TsudaKageyu/minhook) - The Minimalistic x86/x64 API Hooking Library for Windows
 - [zlib](https://zlib.net/) - A Massively Spiffy Yet Delicately Unobtrusive Compression Library
-
----
-
-All rights to the libraries listed above belong to their owners.  
-Repository forked form [**JuniorDjjr**](https://github.com/JuniorDjjr) [*sa-essentials-pack*](https://www.mixmods.com.br/2019/06/sa-essentials-pack/)  
