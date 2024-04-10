@@ -55,6 +55,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [MoonAdditions](https://github.com/THE-FYP/MoonAdditions) - A bunch of useful things for MoonLoader
 - [moonloader-bind](https://luarocks.org/modules/fyp/moonloader-bind) - Events for common tasks
 - [MoonMonet](https://github.com/Northn/MoonMonet) - A library that generates Monet-style color accents
+- [path](https://github.com/moteus/lua-path) - File system path manipulation library
 - [penlight](https://luarocks.org/modules/steved/penlight) - A set of pure Lua libraries focusing on input data handling 
 - [RakLua](https://www.blast.hk/threads/69433/) - A new library for interacting with RakNet and BitStream
 - [RKeys](https://github.com/AnWuPP/rkeys) - Register HotKey for MoonLoader
