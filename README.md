@@ -40,6 +40,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [Imgui Addons](https://www.blast.hk/threads/27544/) - collects several elements for imgui into one common library
 - [lanes](https://luarocks.org/modules/benoitgermain/lanes) - Lanes is a lightweight, native, lazy evaluating multithreading library for Lua
 - [lbase64](https://luarocks.org/modules/fyp/lbase64) - A Base64 library for Lua
+- [luatcc](https://github.com/zhuomingliang/luatcc) - Luatcc is a Lua binding for libtcc
 - [LPeg](https://luarocks.org/modules/gvvaughan/lpeg) - A pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs)
 - [Lrexlib-PCRE](https://luarocks.org/modules/rrt/lrexlib-pcre) - Is a regular expression library, which provides bindings for POSIX and PCRE regular expression libs
 - [LuaFileSystem](https://luarocks.org/modules/fyp/luafilesystem) - File System Library for the Lua Programming Language
@@ -59,6 +60,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [penlight](https://luarocks.org/modules/steved/penlight) - A set of pure Lua libraries focusing on input data handling 
 - [RakLua](https://www.blast.hk/threads/69433/) - A new library for interacting with RakNet and BitStream
 - [RKeys](https://github.com/AnWuPP/rkeys) - Register HotKey for MoonLoader
+- [SAMP-API](https://github.com/imring/SAMP-API.lua) - adds structures and functions from SA:MP
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 - [SFlua](https://github.com/SF-lua/SF.lua) - SA:MP functions for MoonLoader
 - [SNET](https://github.com/SLMP-Team/SNET) - cross-platform, open source, network library
