@@ -63,8 +63,9 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [SAMP-API](https://github.com/imring/SAMP-API.lua) - adds structures and functions from SA:MP
 - [SAMP.Lua](https://github.com/THE-FYP/SAMP.Lua) - A SA-MP API library for MoonLoader
 - [SFlua](https://github.com/SF-lua/SF.lua) - SA:MP functions for MoonLoader
-- [SNET](https://github.com/SLMP-Team/SNET) - cross-platform, open source, network library
+- [SNET](https://github.com/SLMP-Team/SNET) - Cross-platform, open source, network library
 - [strings](https://github.com/c0sui/lua_strings) - Custom string methods for the lua
+- [tabler-icons](https://github.com/neverlane/moon-tabler-icons) - tabler.io icons for lua 
 - [xml](https://github.com/lubyk/xml) - Very fast and simple XML parser for Lua based on RapidXML 1.13
 
 > See the https://luarocks.org/modules/fyp for some of the available [Lua modules](https://github.com/orgs/lunarmodules/repositories?type=all).
