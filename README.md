@@ -34,6 +34,7 @@ After install, just copy all files from archive to your Gta San Andreas game dir
 - [effil](https://github.com/effil/effil) - Multithreading support for Lua
 - [fa-icons](https://gitlab.com/THE-FYP/lua-fa-icons-4) - Font Awesome 4 Icons + Font for Lua
 - [fAwesome](https://www.blast.hk/threads/111224/) - Pack fAwesome fonts v4,v5,v6
+- [hooks](https://www.blast.hk/threads/55743/) -  Lua vmt+jmp/call hook
 - [htmlparse](https://github.com/msva/lua-htmlparser) - An HTML parser for lua
 - [inspect](https://github.com/kikito/inspect.lua) - Human-readable representation of Lua tables
 - [imgui](https://github.com/ocornut/imgui) - ImGui Bloat-free Graphical User interface with minimal dependencies
